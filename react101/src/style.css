@@ -5,9 +5,14 @@ body{
 }
 h2{
     padding: 15px 0;
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
+    border-top:5px solid #000;
+    border-bottom:5px solid #000;
+}
 
+h3{
+    display:inline-block;
+    padding: 15px 0;
+    border-bottom:3px solid #000;
 }
 
 .container{
@@ -45,6 +50,27 @@ code{
     bottom:-20px;
     font-weight:800;
     letter-spacing:1px;
-    border:1px solid black;
- 
+    border:1px solid black; 
 }
+
+.btn{
+    padding:10px;
+    border-radius:5px;
+    border:none;
+    background: dodgerblue;
+    transition:.1s ease-in-out;
+    cursor: pointer;
+    color:#fff;
+    font-weight:1rem;
+}
+
+.btn:hover,
+.btn:focus{
+    background: #000;
+    color:#fff;
+}
+
+.btn:focus{
+    outline:2px solid rebeccapurple;
+}
+

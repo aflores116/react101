@@ -13,11 +13,9 @@ const UsingState = (props: UsingStateProps) => {
     setCount(count + 1);
   }
 
+  //guarnateed to run onMount.
   useEffect(() => {
     console.log('the count is now:', count)
-    return()=>{
-        `<p>cleanp</p>`
-    }
   }, []);
 
   return (
@@ -28,7 +26,8 @@ const UsingState = (props: UsingStateProps) => {
             It's a react hook to perform side effects in an application. Basically things happening as a consequence of something else. Something happens in our app, something changes, something gets triggered, and as a side effect something happens. 
             Side effects are a result of state changes, from one value to another.
         </p>
-        <h3>Ways to use useEffect:</h3>
+        <h3>Ways to use {sectionName}:</h3>
+        <p> In the code below, you can either use no array, and empty array, or an array with dependencies.</p>
         <code>
         { `useEffect(() => {}, []);`}
         </code>
@@ -42,11 +41,12 @@ const UsingState = (props: UsingStateProps) => {
                 }
             }, []);`}
         </code>
-        <h3>Example of using state:</h3>
+        <h3>Example of using {sectionName}:</h3>
         <div className="tutorial">
-            <p className='tutorial__text'>Current count:{count}</p>
-            <p className='tutorial__text'>Open dev tools to look at the count there.</p>
-            <button className='tutorial__button' onClick={handleCount}>Increment</button>
+            <p className='tutorial__text'><strong>Current count: {count} </strong><em>(Open dev tools to look at the count there)</em></p>
+            <button className='btn tutorial__btn' onClick={handleCount}>Increment</button>
+            <p className='tutorial__text'></p>
+           
         </div>
     </section>
    </>
