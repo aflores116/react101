@@ -1,0 +1,50 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    padding: 15px 0;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+
+}
+
+.container{
+    padding:0 20px;
+}
+@media(min-width:48em){
+    .container{
+        max-width: 1340px;
+        width:100%;
+        margin:0 auto;
+    }
+}
+
+code{
+    display:block;
+    padding:15px;
+    margin:0 0 15px 0;
+    color:#ffff;
+    background:#36454F;
+    border:5px solid #000;
+    font-weight:600;
+
+}
+
+.site-section{
+    position:relative;
+    margin:0 0 35px 0;
+
+}
+.site-section::before{
+    content:'End of Section';
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-20px;
+    font-weight:800;
+    letter-spacing:1px;
+    border:1px solid black;
+ 
+}
