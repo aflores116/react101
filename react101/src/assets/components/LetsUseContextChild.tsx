@@ -1,13 +1,12 @@
-import React from 'react'
 
 interface LetsUseContextChildProps {
-  prop1: string;
+  sectionName: string;
 }
 
 const LetsUseContextChild = (props: LetsUseContextChildProps) => {
-  const {prop1} = props;
+  const {sectionName} = props;
   return (
-    <h4>This is the child component of LetsUseContextParent.</h4>
+    <h4>This is the child component of {sectionName}.</h4>
 
   )
 }

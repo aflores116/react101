@@ -1,16 +1,15 @@
-import React from "react";
 import LetsUseContextChild from "./LetsUseContextChild";
 
 interface LetsUseContextParentProps {
-  prop1: string;
+  sectionName: string;
 }
 
 const LetsUseContextParent = (props: LetsUseContextParentProps) => {
-  const { prop1 } = props;
+  const { sectionName } = props;
   return (
     <>
     <section className="site-section">
-      <h2>What the flip is context?</h2>
+      <h2>What the flip is {sectionName}?</h2>
       <p>
         Context is almost what it sounds like. We pass down global state
         variables without having to drill props down through multiple
@@ -28,7 +27,8 @@ const LetsUseContextParent = (props: LetsUseContextParentProps) => {
           </ul>
         </li>
       </ul>
-      <LetsUseContextChild />
+      <LetsUseContextChild
+      sectionName={'context child'} />
       {/* test comment to push  */}
       </section>
     </>
